@@ -40,7 +40,7 @@ p {
     height: 135px;
     font-size: 13pt;
     box-shadow: 3px 2px 9px rgba(0, 0, 0, .3);
-/*    transition: height 0.3s linear 0s, padding 0.3s linear 0s;*/
+    transition: height 0.3s linear 0s, padding 0.3s linear 0s;
 }
 
 .navbar-brand {
@@ -95,6 +95,9 @@ p {
     font-weight: bold;
 }
 
+.nav>li {
+    background-color: white;
+}
 /***** Banner *****/
 
 header {
@@ -109,7 +112,7 @@ header {
 #overlay {
     bottom: 0%;
     position: absolute;
-    background-color: rgba(5, 5, 5, 0.5);
+    background-color: rgba(5, 5, 5, 0.6);
     color: white;
     font-family: Geogia;
     width: 100%;
@@ -331,9 +334,13 @@ filter: progid:none !important;
     #cert2 {
         padding-top: 0;
         min-width: 120px;
+        padding-left: 0px;
     }
 }
-
+@media(max-width: 440px){
+    .navbar-default .nav>li>a {text-align: left;
+                                padding-left: 15px;}
+}
 @media(max-width: 1200px) and (min-width: 993px) {
     #cert2 {margin-right: -100px;}
 }
