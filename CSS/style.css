@@ -299,8 +299,7 @@ filter: progid:none !important;
 
 .footer p {
     background-color: black;
-    color:white;
-    height: 60px;
+    color: white;
     width: 100%;
     text-align: center;
     padding: 15px;
@@ -355,6 +354,10 @@ filter: progid:none !important;
     #cert1 {
     margin-left: 30px;
     }
+}
+
+@media (max-width: 498px){
+    header {background-image: url(images/trees-small.jpg);}
 }
 
 @media (max-width: @screen-xs) {
