@@ -6,13 +6,14 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link rel="stylesheet" href="CSS/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="CSS/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Khula:300,400" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script src="js/functions.js"></script>
 </head>
 <body>
     
-<!-------navbar------->
-    <nav class="navbar navbar-default navbar-fixed-top">
+<!---navbar-->
+    <nav class="navbar navbar-default navbar-fixed-top" id="nav">
         <div class="container-fluid">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                 <span class="sr-only">Toggle navigation</span>
@@ -22,17 +23,17 @@
             </button>
         
         <div class="navbar-header">
-          <a class="navbar-brand" href="#"><img alt="Mark Crane's Tree" width="228" height="130" src="CSS/images/MCT-headerlogo.png"></a>
+          <a class="navbar-brand" href="#"><img alt="Mark Crane's Tree" height="140" src="CSS/images/MCT-headerlogo.png" id="brand"></a>
         </div>
             
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
-            <li class="active"><a href="index.html" style="width: 95px">Home<span class="sr-only">(current)</span></a></li>
-            <li><a href="why-hire-an-arborist.html" style="width: 235px">Why Hire an Arborist</a></li>
+            <li class="active"><a href="index.html">Home<span class="sr-only">(current)</span></a></li>
+            <li><a href="why-hire-an-arborist.html">Why an Arborist</a></li>
               
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="width: 165px">Tree Services<span class="caret"></span></a>
-              <ul class="dropdown-menu" style="width: 300px">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Tree Services<span class="caret"></span></a>
+              <ul class="dropdown-menu">
                 <li><a href="#">Tree Care, Planting and Trimming</a></li>
                 <li><a href="#">Drought Services and Fire Safety</a></li>
                 <li><a href="#">Emergency Tree Services</a></li>
@@ -42,39 +43,43 @@
               </ul>
               
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="width: 132px">About Us<span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About Us<span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li><a href="our-team.html">Our Team</a></li>
                 <li><a href="#">Gallery</a></li>
                 <li><a href="#">Equipment</a></li>
               </ul>
               
-            <li><a href="contact-us.html" style="width: 115px">Contact Us</a></li>
+            <li><a href="contact-us.html">Contact Us</a></li>
           </ul>   
         </div><!-- /.navbar-collapse --> 
       </div><!-- /.container-fluid -->
-    </nav><!------/navbar------>
+      <div class="icons">
+        <a href="https://www.facebook.com/Mark-Cranes-Tree-and-Arborist-Services-102213586490677/?fref=ts"><img src="CSS/images/facebook-logo.png" alt=""></a>
+        <a class="phone-mobile" href="tel:1-805-685-2320"><img src="CSS/images/telephone.png" alt=""></a>
+        <a href="mailto:info@markcranestree.com"><img src="CSS/images/email.png" alt=""></a>
+      </div>
+    </nav><!--/navbar-->
     
-    <!-------banner------->
-    <header>          
+    <header class="home">          
         <div id="overlay">
             <h1>Dedicated to Quality and Service</h1>
-            <p>Keep your trees healthy, beautiful and balanced with the professionals at Mark's Crane's Tree &amp; Arborist Services. Based in Santa Barbara, California, we have proudly served and provided commercial and residential tree services for over 20 years.</p>
+            <p>Keep your trees healthy, beautiful and balanced with the professionals at Mark Crane's Tree &amp; Arborist Services. Based in Santa Barbara, California, we have proudly served and provided commercial and residential tree services for over 20 years.</p>
         </div>
-    </header><!------/banner------> 
+    </header>
     
-    <!-------carousel------->    
+    <!---carousel-->    
     <div class="container homepage">
         <div class="row">        
             <div class="container col-md-7 col-sm-12 hidden-xs">
-                <!-----Carousel Indicators---->       
+                <!--Carousel Indicators-->       
                 <div id="testimonials" class="carousel slide" data-ride="carousel" data-interval="false">
                     <ol class="carousel-indicators">
                          <li data-target="#testimonials" data-slide-to="0" class="active"></li>
                          <li data-target="#testimonials" data-slide-to="1"></li>
                          <li data-target="#testimonials" data-slide-to="2"></li>
                     </ol>
-                    <!-----Wrapper for slides----->
+                    <!---Wrapper for slides-->
                     <div class="carousel-inner" role="listbox">
                         <div class="item active">
                             <img src="CSS/images/tree-01.png" height="270.5" width="500">
@@ -99,7 +104,7 @@
                         </div>
                     </div>
                 </div>      
-                    <!-----Controls----->
+                    <!---Controls-->
                     <a class="left carousel-control" href="#testimonials" role="button" data-slide="prev" data-interval="false">
                         <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
                         <span class="sr-only">Previous</span>
@@ -109,9 +114,9 @@
                         <span class="sr-only">Next</span>
                     </a>
             
-            </div><!-----/carousel----->
+            </div><!---/carousel->
           
-    <!------Certs------->
+    <!-Certs-->
             <div class="col-md-5 col-sm-12"  >
                 <div class="row">
                     <div class="certs">
@@ -126,20 +131,20 @@
             </div>
         </div>
     </div> 
-    <!------/container------>
+    <!--/container-->
 
     
     <div class="footer">
-        <p>(805) 685-2320 | info@markcranestree.com | <a href="#">Contact Us</a></p>
-    </div> <!------/footer------>
-
-    
+        <p> <a class="phone-mobile" href="tel:1-805-685-2320">(805) 685-2320</a> | <a href="mailto:info@markcranestree.com">info@markcranestree.com</a> | <a href="#">Contact Us</a></p>
+        <a href="https://www.facebook.com/Mark-Cranes-Tree-and-Arborist-Services-102213586490677/?fref=ts"><img src="CSS/images/facebook-logo.png" alt=""></a>
+    </div> <!--/footer-->
+   
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
  	<script src="js/jquery.fittext.js"></script>
 	<script type="text/javascript">
-		$("header h1").fitText(1, { minFontSize: '36px', maxFontSize: '44px' });
-        $("header p").fitText(1.1, { minFontSize: '12px', maxFontSize: '26px' });
+		$("header h1").fitText(1, { minFontSize: '34px', maxFontSize: '38px' });
+        $("header p").fitText(1.1, { minFontSize: '12px', maxFontSize: '24px' });
 	</script>
     <script   src="https://code.jquery.com/jquery-2.2.2.js"   integrity="sha256-4/zUCqiq0kqxhZIyp4G0Gk+AOtCJsY1TA00k5ClsZYE="  crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>

@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="CSS/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="js/functions.js"></script>
 </head>
 <body>
-    
-<!-------navbar------->
-    <nav class="navbar navbar-default navbar-fixed-top">
+    <!---navbar-->
+    <nav class="navbar navbar-default navbar-fixed-top" id="nav">
         <div class="container-fluid">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                 <span class="sr-only">Toggle navigation</span>
@@ -19,17 +20,17 @@
             </button>
         
         <div class="navbar-header">
-          <a class="navbar-brand" href="#"><img class="img-responsive" alt="Mark Crane's Tree" width="228" height="130" src="CSS/images/MCT-headerlogo.png"></a>
+          <a class="navbar-brand" href="#"><img alt="Mark Crane's Tree" height="140" src="CSS/images/MCT-headerlogo.png" id="brand"></a>
         </div>
             
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="index.html" style="width: 95px">Home<span class="sr-only">(current)</span></a></li>
-            <li><a href="why-hire-an-arborist.html" style="width: 235px">Why Hire an Arborist</a></li>
+            <li><a href="index.html">Home<span class="sr-only">(current)</span></a></li>
+            <li><a href="why-hire-an-arborist.html">Why an Arborist</a></li>
               
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="width: 165px">Tree Services<span class="caret"></span></a>
-              <ul class="dropdown-menu" style="width: 300px">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Tree Services<span class="caret"></span></a>
+              <ul class="dropdown-menu">
                 <li><a href="#">Tree Care, Planting and Trimming</a></li>
                 <li><a href="#">Drought Services and Fire Safety</a></li>
                 <li><a href="#">Emergency Tree Services</a></li>
@@ -38,32 +39,31 @@
                 <li><a href="#">Tree Pruning and Maintenance</a></li>
               </ul>
               
-            <li class="dropdown active">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="width: 132px">About Us<span class="caret"></span></a>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About Us<span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li class="active"><a href="our-team.html">Our Team</a></li>
                 <li><a href="#">Gallery</a></li>
                 <li><a href="#">Equipment</a></li>
               </ul>
               
-            <li><a href="contact-us.html" style="width: 115px">Contact Us</a></li>
+            <li><a href="contact-us.html">Contact Us</a></li>
           </ul>   
         </div><!-- /.navbar-collapse --> 
       </div><!-- /.container-fluid -->
-    </nav><!------/navbar------>
+    </nav><!--/navbar-->
     
-    <!-------banner------->
-    <div class="body-fixed">
-        <div class="floater" id="smaller">
-            <h3>About Mark Crane's Tree and Arborist Services in Santa Barbara, CA</h3>
-                <p>Locally owned and operated since 1995. Our company features a highly motivated and well trained staff of certified arborists that are not only eager to assist you with all your tree concerns, they are also local, experienced, and English-speaking individuals.</p>
-                <p>Our team is equipped to handle everything from clearing large areas of land, removing dying trees and old stumps, and precision pruning of trees on your personal property.</p>
-        </div> 
-    </div><!------/banner------> 
+    <header class="fixed trunk">
+    </header>
     
-    <div class="body-fixed">
-        <div class="floater" id="team">
+    <div class="container">
+        <div>
             <div class="row">
+                <div class="topper">
+                    <h2 class="center">About Mark Crane's Tree and Arborist Services in Santa Barbara, CA</h2><br>
+                        <p>Locally owned and operated since 1995. Our company features a highly motivated and well trained staff of certified arborists that are not only eager to assist you with all your tree concerns, they are also local, experienced, and English-speaking individuals.</p>
+                        <p>Our team is equipped to handle everything from clearing large areas of land, removing dying trees and old stumps, and precision pruning of trees on your personal property.</p>
+                </div> 
             <div class="col-lg-12">
                 <h2><center>Our Team</center></h2>
                 <h4>Mark Crane</h4>
