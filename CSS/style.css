@@ -10,8 +10,6 @@ body {
 .container {
     margin-top: 40px;
     margin-bottom: 40px;
-    padding-left: 40px;
-    padding-right: 40px;
 }
 
 h3 {
@@ -69,7 +67,6 @@ nav {
 .navbar-default .nav>li>a:hover {
     background-color: white;
     font-weight: bold;
-    text-align: center;
     z-index: 100;
 }
 
@@ -97,7 +94,8 @@ nav {
 }
 
 .navbar-toggle {
-    margin-top: 25px;
+    margin-top: 15px;
+    margin-right: 0;
 }
 
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
@@ -214,8 +212,6 @@ element.style {
 }
 
 .homepage {
-    margin-left: 50px;
-    margin-right: 50px;
     text-align: center;
 }
 
@@ -429,7 +425,7 @@ filter: progid:none !important;
     header {background-image: url(images/trees-small.jpg);
             width: 100%;}
     #overlay p {
-        font-size: 14px;
+        font-size: 20px;
     }
 }
 
