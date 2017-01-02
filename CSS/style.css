@@ -115,14 +115,16 @@ nav {
    
 }
 
+/**********Side Panel*********/
+
 .icons {
     position: absolute;
     right: 15px;
-    top: 200px;
-    height: 127px;
-    width: 50px;
+    top: 250px;
+    height: 118px;
+    width: 44px;
     background-color: white;
-    opacity: 0.6;
+    opacity: 0.8;
     border: 1px solid #AEAEAE;
     border-radius: 5px;
 }
@@ -131,7 +133,7 @@ nav {
     opacity: 1;
     width: 70%;
     margin-left: 15%;
-    margin-top: 8px;
+    margin-top: 9px;
 }
 
 /***** Banner *****/
@@ -215,7 +217,6 @@ element.style {
     margin-left: 50px;
     margin-right: 50px;
     text-align: center;
-    width: 95%;
 }
 
 .carousel-inner {
@@ -365,7 +366,7 @@ filter: progid:none !important;
     letter-spacing: 0.05em;
 }
 
-.footer a {
+.footer a, .footer p {
     color: white;
 }
 
@@ -464,7 +465,6 @@ filter: progid:none !important;
         margin-left: 100px;
         margin-top: 0;   
         border-radius: 3px;
-        width: 190px;
     }    
     .navbar-default .nav>li>a {
         text-align: left;
@@ -473,4 +473,13 @@ filter: progid:none !important;
     .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
         text-align: left;
     }
-}
+    .icons {
+        display: none;
+    }
+    header h1  {
+        font-size: 32px;
+    }
+    header p {
+        font-size: 16px;
+    }
+} 
