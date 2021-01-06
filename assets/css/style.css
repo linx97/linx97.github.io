@@ -1,0 +1,78 @@
+body, html, #Stage {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	-ms-content-zooming: none;
+	-ms-touch-action: none;
+	touch-action: none;
+	background: #fff;
+}
+
+::-webkit-scrollbar-track {
+	background: transparent;
+}
+
+#Stage, #Stage * {
+	position: absolute;
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-o-user-select: none;
+	-ms-user-select: none;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-text-size-adjust: none;
+}
+
+a {
+	opacity: 0.6;
+	display: inline-block;
+	position: relative !important;
+	color: #000;
+	transition: 0.4s all;
+}
+
+a:hover {
+	opacity: 1;
+}
+
+.bg-blur {
+	backdrop-filter: blur(6px);
+}
+
+.image {
+	transition: 0.5s all ease-out;
+	-webkit-transition: 0.5s all ease-out;
+	-moz-transition: 0.5s all ease-out;
+	-o-transition: 0.5s all ease-out;
+	transform: scale(1);
+}
+
+.image-blur {
+	-webkit-filter: blur(10px); -moz-filter: blur(10px);
+	-o-filter: blur(10px); -ms-filter: blur(10px);
+	filter: url(#blur); filter: blur(10px);  filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='3');
+	-webkit-transition: 0.3s all ease-out;
+	-moz-transition: 0.3s all ease-out;
+	-o-transition: 0.3s all ease-out;
+	transition: 0.3s all ease-out;
+	transform: scale(1.03);
+}
+
+iframe {
+	border: none;
+	outline: none;
+}
+
+#Stage * input,  #Stage * textarea {
+	-moz-user-select: auto;
+	-webkit-user-select: auto;
+	-o-user-select: auto;
+	-ms-user-select: auto;
+	-webkit-tap-highlight-color: auto;
+}
+
+#Stage br, #Stage span {
+	position: relative;
+}
