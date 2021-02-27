@@ -210,6 +210,7 @@ p {
   display: none;
   opacity: 0;
   transition: opacity 0.5s ease; 
+  -webkit-padding-start: 0;
   padding-inline-start: 0;
 }
 
@@ -240,7 +241,7 @@ p {
   line-height: 1.6;
   font-size: 2.2rem;
   font-weight: 400;
-  background-image: linear-gradient(135deg, rgb(50 50 50), rgb(250 250 250));
+  background-image: linear-gradient(135deg, rgb(50,50,50), rgb(250,250,250));
   -webkit-background-clip: text;
   -moz-background-clip: text;
   -webkit-text-fill-color: transparent; 
@@ -294,8 +295,9 @@ p {
   padding: 14px;
   width: 239px;
   border-radius: 4px;
-  background: rgb(70,148,197);
-  background: linear-gradient(313deg, rgb(26 92 188) 0%, rgb(160 110 254) 100%);
+  background: rgb(26,92,188);
+  -webkit-background: linear-gradient(313deg, rgb(26,92,188) 0%, rgb(160,110,254) 100%);
+  background: linear-gradient(313deg, rgb(26,92,188) 0%, rgb(160,110,254) 100%);
   color: #fff;
   margin: auto;
   text-decoration: none;
