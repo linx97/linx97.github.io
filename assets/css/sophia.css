@@ -1,0 +1,45 @@
+body {
+	background-image: url(../img/dove.png);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+#canvas {
+	opacity: 0.7;
+}
+
+.main {
+	min-height: 700px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+h2 {
+	margin: 210px 10% 50px;
+    font-size: 3.3rem;
+    letter-spacing: 2;
+    line-height: 1.5;
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+    text-shadow: 1px 1px 16px rgb(164 158 148 / 65%);
+}
+
+.button.gold {
+	background-image: url(../img/gold.png);
+	margin-top: 30px;
+	text-align: center;
+	cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+	.main {
+		min-height: 600px;
+	}
+}

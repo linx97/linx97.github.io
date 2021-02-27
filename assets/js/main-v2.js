@@ -126,7 +126,7 @@ Canvas.prototype.loop = function() {
   if(isTouch || isSafari) {
     this.ghost();
   } else {
-    this.ghostGradient();
+    this.bgImage();
   }    
   if(this.options.maxDistance > 0) {
     this.findClosest();
@@ -170,6 +170,16 @@ Canvas.prototype.ghostGradient = function() {
   this.ctx.globalOpacity = 0.1;
   this.ctx.globalCompositeOperation = "darken";
   this.ctx.fillRect(0, 0 , this.width, this.height);
+}
+
+Canvas.prototype.bgImage = function() {
+  var bg = new Image();
+  bg.src = '../img/temple-gates.png'; 
+  bg.onload = function(){
+      var pattern = context.createPattern(this, "repeat");
+      this.ctx.fillStyle = pattern;
+      this.ctx.fill();
+  };
 }
 
 // Draw
@@ -281,7 +291,7 @@ new Canvas({
   width: function() { return window.innerWidth; },
   height: function() { return window.innerHeight; },
   size: 13,
-  color: '30, 180, 1',
+  color: '200,200,200',
   maxDistance: 100,
   background: ['248,248,248', '219,220,221']
 });
