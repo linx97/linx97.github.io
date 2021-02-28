@@ -123,7 +123,11 @@ Canvas.prototype.findClosest = function() {
 
 Canvas.prototype.loop = function() {
 //   this.clear();
-    this.ghostGradient(); 
+  if(isTouch || isSafari) {
+    this.ghost();
+  } else {
+    this.ghostGradient();
+  }    
   if(this.options.maxDistance > 0) {
     this.findClosest();
   }    
@@ -249,10 +253,12 @@ Particle.prototype.update = function(target, index) {
   this.position.x = this.shift.x + Math.cos(index + this.angle) * this.orbit;
   this.position.y = this.shift.y + Math.sin(index + this.angle) * this.orbit;
   
-  this.size += (this.targetSize - this.size) * 0.03;
+  if(!isSafari) {
+    this.size += (this.targetSize - this.size) * 0.03;
 
-  if(Math.round(this.size) === Math.round(this.targetSize)) {
-    this.targetSize = 1 + Math.random() * this.options.size;
+    if(Math.round(this.size) === Math.round(this.targetSize)) {
+      this.targetSize = 1 + Math.random() * this.options.size;
+    }
   }
 }
 
