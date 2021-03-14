@@ -293,3 +293,17 @@ $(window).on("scroll", function() {
        $(".header").removeClass("active");
     }
 });
+
+$(".toggle-accordion").on("click", function() {
+    var close = $(this).hasClass('active') ? true : false;
+
+    $(".toggle-accordion").removeClass('active');
+    $(".toggle-accordion + div").slideUp();
+
+    if(!close){
+    var content = $(this).next();
+    content.slideToggle();
+    content.toggleClass('open');
+    $(this).toggleClass("active");
+    }
+}); 

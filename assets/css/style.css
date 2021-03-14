@@ -275,10 +275,13 @@ p {
 .feature-card .bottom {
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
-  background: rgba(250,250,250,0.2);
-  backdrop-filter: blur(8px);
   text-align: center;
   padding: 30px 30px 50px;
+}
+
+.glass {
+  background: rgba(250,250,250,0.3);
+  backdrop-filter: blur(8px);
 }
 
 .feature-card .bottom h3 {
@@ -344,6 +347,13 @@ p {
   font-weight: bold;
   line-height: 1.4;
 }
+.benefits ul li::marker {
+  color: #6973d9;
+}
+
+
+/*TESTIMONIALS & CAROUSEL*/
+
 .testimonials{
   padding: 20px 20px 30px;
   background: #fff;
@@ -361,6 +371,136 @@ p {
 .testimonials .text p strong {
   text-transform: uppercase;
   display: block;
+}
+
+.carousel {
+    position: relative;
+}
+
+.carousel-inner {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-open:checked + .carousel-item {
+    position: static;
+    opacity: 100;
+}
+
+.carousel-item {
+    position: absolute;
+    opacity: 0;
+    -webkit-transition: opacity 0.6s ease-out;
+    transition: opacity 0.6s ease-out;
+    height:222px;
+}
+
+.card .text .carousel-item p {
+    margin-top: 0;
+}
+
+.carousel-control {
+    color: #949494;
+    cursor: pointer;
+    display: none;
+    font-size: 30px;
+    height: 40px;
+    line-height: 35px;
+    position: absolute;
+    bottom: -34px;
+    -webkit-transform: translate(0, -50%);
+    cursor: pointer;
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    text-align: center;
+    width: 40px;
+    z-index: 10;
+}
+
+.carousel-control.prev {
+    left: 43%;
+}
+
+.carousel-control.next {
+    right: 43%;
+}
+
+.carousel-control:hover {
+    color: #1b1b1b;
+}
+
+#carousel-1:checked ~ .control-1,
+#carousel-2:checked ~ .control-2,
+#carousel-3:checked ~ .control-3,
+#carousel-4:checked ~ .control-4 {
+    display: block;
+}
+
+.carousel-indicators {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    bottom: 2%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 10;
+}
+
+.carousel-indicators li {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+
+/*FAQ ACCORDIONS*/
+
+.topics-list>div {
+    border-radius: 4px;
+    text-decoration: none;
+    display: block;
+    -webkit-box-shadow: 0 3px 9px 0 rgb(0 0 0 / 9%);
+    box-shadow: 0 3px 9px 0 rgb(0 0 0 / 9%);
+    padding: 20px 40px;
+    margin-bottom: 20px;
+    position: relative;
+    -webkit-transition: background-color .3s;
+    -o-transition: background-color .3s;
+    transition: background-color .3s;
+}
+
+.topics-list>div span:after {
+    content: "";
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    background-image: url(../img/arrow-right-ico.svg);
+    width: 10px;
+    height: 18px;
+    transition: all .2s ease-out;
+    cursor: pointer;
+}
+.topics-list div {
+    list-style-type: none;
+}
+.toggle-accordion {
+  font-weight: bold;
+}
+.toggle-accordion+div {
+    margin-top: 30px;
+    font-weight: 400;
+    line-height: 1.7;
+    margin-right: 50px;
+    display: none;
+}
+.topics-list>div span.active:after {
+    transform: rotate(90deg);
+    opacity: .35;
+}
+.topics-list div span {
+  cursor: pointer;
 }
 
 /*footer*/
@@ -441,7 +581,8 @@ p {
   }
   .testimonials .img-holder {
     width: 36%;
-    display: inline-block;
+    float: right;
+    margin-top: 58px;
   }
 }
 
@@ -609,4 +750,32 @@ p {
   .footer .mobile-only img:hover, .footer .mobile-only img:focus {
     opacity: 1;
   }
+  .topics-list>div {
+    padding: 20px 30px 20px 14px;
+  }
+  .topics-list>div span:after {
+    right: 18px;
+  }
+  .main {
+    padding: 50px 22px 30px;
+  }
+  .carousel-item {
+    height: 300px;
+  }
+  .testimonials img {
+    margin-top: 30px;
+  }
+  .carousel-control.next {
+    right: 38%;
+}
+.carousel-control.prev {
+    left: 38%;
+}
+.testimonials .text p {
+    font-size: 0.88rem;
+  }
+  .toggle-accordion+div {
+    margin-right: 0;
+  }
+
 }
