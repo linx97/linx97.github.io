@@ -9,7 +9,7 @@ body {
   color: #5e5e5e;
   margin: 0;
   letter-spacing: 0.8;
-  font-size: 17px;
+  font-size: 16px;
 }
 
 #canvas {
@@ -26,6 +26,7 @@ body {
 a {
   color: #919191;
   text-decoration: none;
+  cursor: pointer;
 }
 
 a:hover {
@@ -248,12 +249,14 @@ p {
   -moz-text-fill-color: transparent;
 }
 
-.feature-card {
-  margin: 120px auto 70px;
-  width: 60%;
+.card {
   border-radius: 8px;
   box-shadow: 10px 10px 60px -8px rgba(0,0,0,0.2);
   transition: all 0.2s ease-in-out;
+}
+.card.feature-card {
+  margin: 120px auto 70px;
+  width: 60%;
 }
 
 .feature-card .top {
@@ -289,7 +292,35 @@ p {
     font-size: 1.2rem;
   margin-bottom: 25px;
 }
-
+.egg-page > div {
+  margin-top: 60px
+}
+.egg-page > div h2 {
+  text-align: center;
+}
+.card.how-it-works .text {
+  padding: 10px 20px;
+}
+.how-it-works {
+  position: relative;
+  padding-top: 260px;
+  background: #fff;
+}
+.how-it-works .picture-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 260px;
+  background-image: url(../img/harmonic-egg2.jpg);
+  background-size: cover;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+}
+.how-it-works .text a {
+  display: block;
+    margin-top: 12px;
+}
 .button {
   font-weight: bold;
   padding: 14px;
@@ -309,7 +340,28 @@ p {
 .button:hover {
   opacity: 1;
 }
-
+.benefits ul li {
+  font-weight: bold;
+  line-height: 1.4;
+}
+.testimonials{
+  padding: 20px 20px 30px;
+  background: #fff;
+}
+.testimonials img {
+  max-width: 100%;
+}
+.testimonials .text p {
+    font-style: italic;
+    font-size: 0.9rem;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    text-align: center;
+}
+.testimonials .text p strong {
+  text-transform: uppercase;
+  display: block;
+}
 
 /*footer*/
 
@@ -333,6 +385,65 @@ p {
   text-align: right;
 }
 
+
+@media (min-width: 660px){
+  .mobile-only {
+    display: none;
+  }
+  .card .text {
+    padding: 20px 30px;
+  }
+  .egg-page > div {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 80px;
+    margin-bottom: 30px;
+    box-sizing: border-box;
+  }
+  .how-it-works {
+    padding-top: 0;
+  }
+  .how-it-works .picture-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 30%;
+    height: auto;
+    background-image: url(../img/harmonic-egg2.jpg);
+    background-size: cover;
+    border-bottom-left-radius: 8px;
+    border-top-left-radius: 8px;
+  }
+  .how-it-works {
+    padding-left: 30%;
+  }
+  .how-it-works .text a {
+    display: inline;
+      margin-top: 0;
+  }
+  .egg-page .card.how-it-works {
+    margin-top: 100px
+  }
+  .benefits ul {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 122px;
+    justify-content: space-between;
+    margin: 40px 0 20px;
+  }
+  .testimonials .text {
+    width: 60%;
+    display: inline-block;
+    box-sizing: border-box;
+  }
+  .testimonials .img-holder {
+    width: 36%;
+    display: inline-block;
+  }
+}
 
 @media (min-width: 768px) {
   .header {
@@ -360,7 +471,26 @@ p {
   top: 80px;
   box-shadow: -2px 7px 19px 0px rgb(216 216 216 / 30%);
   -webkit-box-shadow: -2px 7px 19px 0px rgb(216 216 216 / 30%);
-}
+  }
+  .egg-page > div {
+    max-width: 950px;
+  }
+  .how-it-works {
+    min-height: 370px;
+  }
+  .how-it-works .picture-box {
+    width: 280px;
+  }
+  .how-it-works {
+    padding-left: 280px;
+  }
+  .card.how-it-works .text {
+    padding: 36px 50px;
+  }
+  .card .text p {
+    line-height: 1.8;
+    margin-top: 26px;
+  }
 }
 
 @media (max-width: 990px) {
@@ -392,11 +522,7 @@ p {
   }
 }
 
-@media (min-width: 660px){
-  .mobile-only {
-    display: none;
-  }
-}
+
 
 @media (max-width: 768px){
   .main h1 {
