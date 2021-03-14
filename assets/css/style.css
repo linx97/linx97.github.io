@@ -44,7 +44,7 @@ p {
 .header {
   position: fixed;
   width: 100%;
-  z-index: 3;
+  z-index: 200;
   transition: 0.444s ease-in;
   height: 62px;
 }
@@ -462,7 +462,7 @@ p {
     text-decoration: none;
     display: block;
     -webkit-box-shadow: 0 3px 9px 0 rgb(0 0 0 / 9%);
-    box-shadow: 0 3px 9px 0 rgb(0 0 0 / 9%);
+    box-shadow: 4px 4px 25px -8px rgba(0,0,0,0.2);
     padding: 20px 40px;
     margin-bottom: 20px;
     position: relative;
