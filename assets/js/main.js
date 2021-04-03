@@ -123,11 +123,12 @@ Canvas.prototype.findClosest = function() {
 
 Canvas.prototype.loop = function() {
 //   this.clear();
-  if(isTouch || isSafari) {
-    this.ghost();
-  } else {
-    this.ghostGradient();
-  }    
+  // if(isTouch || isSafari) {
+  //   this.ghost();
+  // } else {
+  //   this.ghostGradient();
+  // }    
+  this.ghostGradient();
   if(this.options.maxDistance > 0) {
     this.findClosest();
   }    
@@ -283,7 +284,7 @@ new Canvas({
   size: 13,
   color: '30, 180, 1',
   maxDistance: 100,
-  background: ['248,248,248', '219,220,221']
+  background: ['248,248,248', '222,223,224']
 });
 
 $(window).on("scroll", function() {
