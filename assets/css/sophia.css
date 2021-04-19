@@ -10,7 +10,7 @@ body {
 }
 
 .main {
-	min-height: 700px;
+	min-height: 650px;
 }
 
 .footer {
@@ -21,8 +21,8 @@ body {
 }
 
 h2 {
-	margin: 210px 10% 50px;
-    font-size: 3.3rem;
+	margin: 170px 10% 60px;
+    font-size: 3rem;
     letter-spacing: 2;
     line-height: 1.5;
     font-weight: 600;
@@ -32,14 +32,25 @@ h2 {
 }
 
 .button.gold {
-	background-image: url(../img/gold.png);
+	background-image: url(../img/gold-background.png);
 	margin-top: 30px;
 	text-align: center;
 	cursor: pointer;
 }
 
+@media screen and (max-width: 768px) {
+	h2 {
+		margin: 110px 10% 40px;
+		font-size: 2.6rem;
+	}
+
+}
 @media screen and (max-width: 600px) {
 	.main {
 		min-height: 600px;
+	}
+	h2 {
+		margin: 60px 2% 40px;
+		font-size: 2.3rem;
 	}
 }

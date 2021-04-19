@@ -29,7 +29,7 @@ h2 {
     color: #fff;
     text-align: center;
     /*text-shadow: 1px 1px 16px rgb(164 158 148 / 65%);*/
-    background-image: url(../img/gold.png);
+    background-image: url(../img/gold-background.png);
 	  -webkit-background-clip: text;
 	  -moz-background-clip: text;
 	  -webkit-text-fill-color: transparent; 
@@ -37,7 +37,7 @@ h2 {
 }
 
 .button.gold {
-	background-image: url(../img/gold.png);
+	background-image: url(../img/gold-background.png);
 	margin-top: 30px;
 	text-align: center;
 	cursor: pointer;
@@ -51,5 +51,8 @@ h2 {
 @media screen and (max-width: 600px) {
 	.main {
 		min-height: 600px;
+	}
+	h2 {
+		margin: 60px 5% 40px;
 	}
 }

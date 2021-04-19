@@ -339,13 +339,16 @@ p {
   border-radius: 4px;
   letter-spacing: 1.2px;
   background: linear-gradient(-45deg, #2b55b3, #512ba5, #006fe0);
-  background-size: 400% 400%;
   color: #fff;
   margin: auto;
   text-decoration: none;
   font-size: 1.1rem;
   opacity: 0.7;
   transition: 0.5s linear;
+  background-size: cover;
+}
+.button.animated {
+  background-size: 400% 400%;
   animation: bg-colors 15s ease infinite;
 }
 
