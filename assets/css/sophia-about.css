@@ -21,31 +21,59 @@ body {
 }
 
 h2 {
-	margin: 110px 10% 50px;
+	margin: 90px 10% 30px;
     font-size: 2.2rem;
     letter-spacing: 2;
     line-height: 1.5;
     font-weight: 600;
     color: #fff;
     text-align: center;
-    /*text-shadow: 1px 1px 16px rgb(164 158 148 / 65%);*/
-    background-image: url(../img/gold-background.png);
-	  -webkit-background-clip: text;
-	  -moz-background-clip: text;
-	  -webkit-text-fill-color: transparent; 
-	  -moz-text-fill-color: transparent;
 }
-
+.gold-text {
+	/*text-shadow: 1px 1px 16px rgb(164 158 148 / 65%);*/
+	background-image: url(../img/gold-background.png);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  -moz-text-fill-color: transparent;
+}
+.quote {
+	text-align: center;
+	max-width: 600px;
+	line-height: 1.7;
+	margin: 20px auto 40px;
+}
 .button.gold {
 	background-image: url(../img/gold-background.png);
 	margin-top: 30px;
 	text-align: center;
 	cursor: pointer;
 }
+.callout {
+	text-align: center;
+	font-size: 1.3rem;
+	margin: 30px 0;
+}
+.btn-box {
+  padding: 1.5rem 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+}
+
+.btn-box > div {
+  min-width: 260px;
+  vertical-align: middle;
+  display: table-cell;
+}
 
 .container {
 	max-width: 800px;
 	margin: auto;
+	/*text-align: justify;*/
+	margin-bottom: 130px;
 }
 
 @media screen and (max-width: 600px) {
