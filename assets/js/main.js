@@ -273,6 +273,12 @@ Vector.prototype.distanceTo = function(vector, abs) {
   return abs || false ? Math.abs(distance) : distance;
 };
 
+var isFirefox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
+
+if (isFirefox) {
+  $('#clip-text').removeClass('bg-clip-text')
+}
+
 new Canvas({
   el: document.getElementById('canvas'),
 
