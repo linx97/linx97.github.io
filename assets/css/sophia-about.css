@@ -73,7 +73,7 @@ h2 {
 }
 
 .btn-box > div {
-  min-width: 260px;
+  min-width: 280px;
   vertical-align: middle;
   display: table-cell;
 }
@@ -91,5 +91,9 @@ h2 {
 	}
 	h2 {
 		margin: 60px 5% 40px;
+	}
+	.btn-box {
+		flex-direction: column;
+	    -webkit-flex-direction: column;
 	}
 }
