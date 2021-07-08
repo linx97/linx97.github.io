@@ -282,15 +282,15 @@ if (isFirefox) {
 new Canvas({
   el: document.getElementById('canvas'),
 
-  count: 21,
+  count: 22,
   speed: 0.002,
-  radius: 5,
+  radius: 6,
   width: function() { return window.innerWidth; },
   height: function() { return window.innerHeight; },
-  size: 13,
+  size: 15,
   color: '30, 180, 1',
   maxDistance: 100,
-  background: ['248,248,248', '222,223,224']
+  background: ['246,246,246', '207,209,211']
 });
 
 $(window).on("scroll", function() {
