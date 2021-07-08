@@ -290,7 +290,7 @@ new Canvas({
   size: 15,
   color: '30, 180, 1',
   maxDistance: 100,
-  background: ['246,246,246', '207,209,211']
+  background: ['248,248,248', '209,211,212']
 });
 
 $(window).on("scroll", function() {
