@@ -13,13 +13,6 @@ body {
 	min-height: 650px;
 }
 
-.footer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
-
 h2 {
 	margin: 170px 10% 60px;
     font-size: 3rem;
