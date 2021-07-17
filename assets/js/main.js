@@ -65,7 +65,7 @@ Canvas.prototype.options = {
   height: 400,
   size: 5,
   radius: 1,
-  background: '240, 240, 240',
+  background: '240, 240, 240, 0.6',
   maxDistance: 100
 }
 
@@ -145,9 +145,9 @@ Canvas.prototype.ghost = function() {
   this.ctx.globalCompositeOperation = "source-over";
   this.ctx.rect(0, 0 , this.width, this.height);
   if(typeof this.options.background === 'string') {
-    this.ctx.fillStyle = "rgb(" + this.options.background + ")";
+    this.ctx.fillStyle = "rgba(" + this.options.background + ")";
   } else  {
-    this.ctx.fillStyle = "rgb(" + this.options.background[0] + ")";
+    this.ctx.fillStyle = "rgba(" + this.options.background[0] + ")";
   }
     
   this.ctx.fill();
@@ -157,13 +157,13 @@ Canvas.prototype.ghostGradient = function() {
   var gradient;
   
   if(typeof this.options.background === 'string') {
-    this.ctx.fillStyle = 'rgb(' + this.options.background + ')';   
+    this.ctx.fillStyle = 'rgba(' + this.options.background + ')';   
   } else {
     var gradient = this.ctx.createLinearGradient(0, 0, 0, this.height);
     
     var length = this.options.background.length;
     for(var i = 0; i < length; i++){
-      gradient.addColorStop((i+1) / length, 'rgb(' + this.options.background[i] + ')');
+      gradient.addColorStop((i+1) / length, 'rgba(' + this.options.background[i] + ')');
     }
     this.ctx.fillStyle = gradient;
   }
@@ -290,7 +290,7 @@ new Canvas({
   size: 15,
   color: '30, 180, 1',
   maxDistance: 100,
-  background: ['248,248,248', '209,211,212']
+  background: ['248,248,248,0.8', '209,211,212,5']
 });
 
 $(window).on("scroll", function() {

@@ -9,7 +9,12 @@ body {
   color: #5e5e5e;
   margin: 0;
   letter-spacing: 0.8;
-  font-size: 16px;
+  font-size: 1rem;
+  background-image: url(../img/background2.png);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 #canvas {
@@ -17,7 +22,7 @@ body {
   height: 100%;
   position: fixed;
   z-index: 100;
-  background: linear-gradient(rgb(248,248,248), rgb(219,220,221));
+  opacity: 0.8;
 }
 .page-content {
   position: relative;
@@ -778,11 +783,10 @@ background: radial-gradient(ellipse at center, #dedcdc 0%,#a3a3a7 100%); /* W3C,
     display: none;
   }
   .dropdown-menu {
-      background: rgb(255,255,255);
-    background: linear-gradient(0deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.95) 86%, rgba(255,255,255,0) 100%);
-  text-align: left;
-  top: 80px;
-  padding-left: 0;
+    background: rgb(255,255,255);
+    text-align: left;
+    top: 80px;
+    padding-left: 0;
   }
   .egg-page > div, .pricing-container, .contact-container {
     max-width: 950px;
