@@ -10,7 +10,7 @@ body {
   margin: 0;
   letter-spacing: 0.8;
   font-size: 1rem;
-  background-image: url(../img/background2.png);
+  background-image: url(../img/background.png);
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
@@ -872,6 +872,9 @@ background: radial-gradient(ellipse at center, #dedcdc 0%,#a3a3a7 100%); /* W3C,
 
 
 @media (max-width: 768px){
+  body {
+    background-image: url(../img/background-mobile.png);
+  }
   .main h1 {
     font-size: 1.5rem;
   }
