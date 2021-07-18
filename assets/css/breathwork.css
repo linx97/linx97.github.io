@@ -1,5 +1,5 @@
 body {
-	background-image: url(../img/breathwork.jpg);
+	background-image: url(../img/sand.jpeg);
 }
 
 .silver-text {
@@ -13,6 +13,15 @@ body {
   -moz-background-clip: text;
   -webkit-text-fill-color: transparent; 
   -moz-text-fill-color: transparent;
+}
+.how-it-works {
+	max-width: 500px;
+	margin: auto;
+}
+.how-it-works .picture-box {
+  background-image: url(../img/gif4.gif);
+  background-position: center;
+  border-top-right-radius: 0;
 }
 
 h2 {
