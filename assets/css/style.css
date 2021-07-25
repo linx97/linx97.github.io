@@ -568,27 +568,7 @@ p {
   background: -webkit-radial-gradient(center, ellipse cover, #fff 0%,#e6e6e8 100%); /* Chrome10-25,Safari5.1-6 */
   background: radial-gradient(ellipse at center, #fff 0%,#e6e6e8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
-.pricing-card:nth-of-type(2) .top{
-  background: ;
-  background: #d9d9de; /* Old browsers */
-background: -moz-radial-gradient(center, ellipse cover, #efefef 0%, #d9d9de 100%); /* FF3.6-15 */
-background: -webkit-radial-gradient(center, ellipse cover, #efefef 0%,#d9d9de 100%); /* Chrome10-25,Safari5.1-6 */
-background: radial-gradient(ellipse at center, #efefef 0%,#d9d9de 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-}
-.pricing-card:nth-of-type(3) .top{
-  background: ;
-  background: #b7b7bd; /* Old browsers */
-background: -moz-radial-gradient(center, ellipse cover, #ecebeb 0%, #b7b7bd 100%); /* FF3.6-15 */
-background: -webkit-radial-gradient(center, ellipse cover, #ecebeb 0%,#b7b7bd 100%); /* Chrome10-25,Safari5.1-6 */
-background: radial-gradient(ellipse at center, #ecebeb 0%,#b7b7bd 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-}
-.pricing-card:nth-of-type(4) .top{
-  background: ;
-  background: #a3a3a7; /* Old browsers */
-background: -moz-radial-gradient(center, ellipse cover, #dedcdc 0%, #a3a3a7 100%); /* FF3.6-15 */
-background: -webkit-radial-gradient(center, ellipse cover, #dedcdc 0%,#a3a3a7 100%); /* Chrome10-25,Safari5.1-6 */
-background: radial-gradient(ellipse at center, #dedcdc 0%,#a3a3a7 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-}
+
 .pricing-card .price {
   font-size: 3.5rem;
   margin-bottom: 10px;
