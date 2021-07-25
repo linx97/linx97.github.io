@@ -18,12 +18,12 @@ function Canvas(options) {
   window.addEventListener('resize', this.updateDimensions.bind(this), false);
   this.resetTarget();
   
-  // if(isTouch){
-  //     // touch
-  //   this.el.addEventListener('touchstart', this.touchMove.bind(this), false);
-  //  this.el.addEventListener('touchmove', this.touchMove.bind(this), false);
-  //  this.el.addEventListener('touchend', this.resetTarget.bind(this), false);
-  // } else {
+  if(isTouch){
+      // touch
+    this.el.addEventListener('touchstart', this.touchMove.bind(this), false);
+   this.el.addEventListener('touchmove', this.touchMove.bind(this), false);
+   this.el.addEventListener('touchend', this.resetTarget.bind(this), false);
+  } else {
     // Mouse
     window.addEventListener('mousemove', this.mouseMove.bind(this), false);
    window.addEventListener('mouseout', this.resetTarget.bind(this), false);
