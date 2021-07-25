@@ -19,7 +19,7 @@ function Canvas(options) {
   this.resetTarget();
   
   if(isTouch){
-      // touch
+     // touch
     this.el.addEventListener('touchstart', this.touchMove.bind(this), false);
    this.el.addEventListener('touchmove', this.touchMove.bind(this), false);
    this.el.addEventListener('touchend', this.resetTarget.bind(this), false);
@@ -27,7 +27,7 @@ function Canvas(options) {
     // Mouse
     window.addEventListener('mousemove', this.mouseMove.bind(this), false);
    window.addEventListener('mouseout', this.resetTarget.bind(this), false);
-  // }
+  }
   
   this.setupParticles();
 
