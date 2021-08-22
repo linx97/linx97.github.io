@@ -50,6 +50,10 @@ p {
   text-align: center;
 }
 
+.underlined {
+  text-decoration: underline;
+}
+
 /* header */
 
 .header {
@@ -900,7 +904,7 @@ p {
 
 @media (max-width: 660px){
   .desktop-only {
-    display: none;
+    display: none !important;
   }
   .logo img {
     width: 222px;
