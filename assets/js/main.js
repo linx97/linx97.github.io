@@ -291,7 +291,7 @@ new Canvas({
   size: 15,
   color: '30, 180, 1',
   maxDistance: 100,
-  background: ['248,248,248,0.8', '209,211,212,0.5']
+  background: ['248,248,248,0.8', '215,216,215,0.5']
 });
 
 $(window).on("scroll", function() {

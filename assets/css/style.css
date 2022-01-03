@@ -10,11 +10,11 @@ body {
   margin: 0;
   letter-spacing: 0.8;
   font-size: 1rem;
-  background-image: url(../img/background.png);
+/*  background-image: url(../img/background.png);
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat;*/
 }
 
 #canvas {
@@ -22,7 +22,7 @@ body {
   height: 100%;
   position: fixed;
   z-index: 100;
-  opacity: 0.8;
+  /*opacity: 0.8;*/
 }
 .page-content {
   position: relative;
