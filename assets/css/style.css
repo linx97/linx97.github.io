@@ -250,8 +250,11 @@ p {
   flex: 1 1 auto !important;
 }
 
-.gradient-text {
-    
+.disclaimer {
+  padding: 0 0.7rem;
+  font-size: 0.78rem;
+  line-height: 1.2rem;
+  color: #787878;
 }
 
 .main.index h1 {
@@ -907,6 +910,11 @@ p {
     box-shadow: -2px 7px 19px 0px rgba(216,216,216,0.5);
     -webkit-box-shadow: -2px 7px 19px 0px rgba(216,216,216,0.5);
     -moz-box-shadow: -2px 7px 19px 0px rgba(216,216,216,0.5);
+  }
+  .disclaimer {
+    padding: 0;
+    font-size: 0.6rem;
+    line-height: 1rem;
   }
 }
 
