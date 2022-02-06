@@ -692,6 +692,14 @@ p {
   color: #6b6b6b;
 }
 
+
+/*booking*/
+.booking-widget .Embedded_Widget {
+  background: transparent;
+}
+.booking-widget .vagaro-container.vagaro-embedded-widget .vagaro-iframe .vagaro-footer {
+  display: none;
+}
 /*footer*/
 
 .footer {

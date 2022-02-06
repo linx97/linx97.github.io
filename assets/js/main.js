@@ -2,7 +2,6 @@ var PI2 = Math.PI * 2;
 var HALF_PI = Math.PI / 2;
 
 var isTouch = 'ontouchstart' in window;
-console.log("isTouch", isTouch);
 var isSafari =  !!navigator.userAgent.match(/Version\/[\d\.]+.*Safari/);
 
 function Canvas(options) {
@@ -19,14 +18,14 @@ function Canvas(options) {
   this.resetTarget();
   
   if(isTouch){
-     // touch
+      // touch
     this.el.addEventListener('touchstart', this.touchMove.bind(this), false);
-   this.el.addEventListener('touchmove', this.touchMove.bind(this), false);
-   this.el.addEventListener('touchend', this.resetTarget.bind(this), false);
+    this.el.addEventListener('touchmove', this.touchMove.bind(this), false);
+//     this.el.addEventListener('touchend', this.resetTarget.bind(this), false);
   } else {
     // Mouse
     window.addEventListener('mousemove', this.mouseMove.bind(this), false);
-   window.addEventListener('mouseout', this.resetTarget.bind(this), false);
+    window.addEventListener('mouseout', this.resetTarget.bind(this), false);
   }
   
   this.setupParticles();
@@ -60,13 +59,13 @@ Canvas.prototype.touchMove = function(event) {
 
 // Defaults
 Canvas.prototype.options = {
-  count: 11,
-  speed: 0.001,
+  count: 20,
+  speed: 0.5,
   width: 400,
   height: 400,
-  size: 5,
-  radius: 1,
-  background: '240, 240, 240, 0.6',
+  size: 10,
+  radius: 5,
+  background: '29, 22, 52',
   maxDistance: 100
 }
 
@@ -124,12 +123,11 @@ Canvas.prototype.findClosest = function() {
 
 Canvas.prototype.loop = function() {
 //   this.clear();
-  // if(isTouch || isSafari) {
-  //   this.ghost();
-  // } else {
-  //   this.ghostGradient();
-  // }    
-  this.ghostGradient();
+  if(isTouch || isSafari) {
+    this.ghost();
+  } else {
+    this.ghostGradient();
+  }    
   if(this.options.maxDistance > 0) {
     this.findClosest();
   }    
@@ -146,9 +144,9 @@ Canvas.prototype.ghost = function() {
   this.ctx.globalCompositeOperation = "source-over";
   this.ctx.rect(0, 0 , this.width, this.height);
   if(typeof this.options.background === 'string') {
-    this.ctx.fillStyle = "rgba(" + this.options.background + ")";
+    this.ctx.fillStyle = "rgb(" + this.options.background + ")";
   } else  {
-    this.ctx.fillStyle = "rgba(" + this.options.background[0] + ")";
+    this.ctx.fillStyle = "rgb(" + this.options.background[0] + ")";
   }
     
   this.ctx.fill();
@@ -158,13 +156,13 @@ Canvas.prototype.ghostGradient = function() {
   var gradient;
   
   if(typeof this.options.background === 'string') {
-    this.ctx.fillStyle = 'rgba(' + this.options.background + ')';   
+    this.ctx.fillStyle = 'rgb(' + this.options.background + ')';   
   } else {
-    var gradient = this.ctx.createLinearGradient(0, 0, 0, this.height);
+     var gradient = this.ctx.createRadialGradient(this.width/2, this.height/2, 0, this.width/2, this.height/2, Math.max(this.width, this.height)/2);
     
     var length = this.options.background.length;
     for(var i = 0; i < length; i++){
-      gradient.addColorStop((i+1) / length, 'rgba(' + this.options.background[i] + ')');
+      gradient.addColorStop((i+1) / length, 'rgb(' + this.options.background[i] + ')');
     }
     this.ctx.fillStyle = gradient;
   }
@@ -207,7 +205,7 @@ Canvas.prototype.drawLines = function (point, color) {
   this.ctx.lineCap = 'round';
   while(++index < length) {
     this.ctx.lineWidth = (point.size * 2) *  point.closest[index].opacity;
-    this.ctx.strokeStyle = 'rgba(250,250,250, ' + point.closest[index].opacity + ')';
+    this.ctx.strokeStyle = 'rgba(' + color + ', ' + point.closest[index].opacity + ')';
     this.ctx.beginPath();
     this.ctx.moveTo(point.position.x, point.position.y);
     this.ctx.lineTo(point.closest[index].x, point.closest[index].y);
@@ -274,25 +272,27 @@ Vector.prototype.distanceTo = function(vector, abs) {
   return abs || false ? Math.abs(distance) : distance;
 };
 
+new Canvas({
+  el: document.getElementById('canvas'),
+
+  count: 25,
+  speed: 0.3,
+  radius: 6,
+  width: function() { return window.innerWidth; },
+  height: function() { return window.innerHeight; },
+  size: 15,
+  color: '30, 30, 30',
+  maxDistance: 100,
+  background: ['222, 222, 222', '202, 202, 202']
+});
+
+/////////////////////////////////////////////
+
 var isFirefox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
 
 if (isFirefox) {
   $('#clip-text').removeClass('bg-clip-text')
 }
-
-new Canvas({
-  el: document.getElementById('canvas'),
-
-  count: 22,
-  speed: 0.002,
-  radius: 6,
-  width: function() { return window.innerWidth; },
-  height: function() { return window.innerHeight; },
-  size: 15,
-  color: '30, 180, 1',
-  maxDistance: 100,
-  background: ['248,248,248,0.8', '215,216,215,0.5']
-});
 
 $(window).on("scroll", function() {
     if($(window).scrollTop() > 50) {
