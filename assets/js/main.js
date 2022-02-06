@@ -54,18 +54,18 @@ Canvas.prototype.resetTarget = function() {
 Canvas.prototype.touchMove = function(event) {
   if(event.touches.length === 1) {  event.preventDefault(); }
 
-  this.target = new Vector(event.touches[0].pageX * this.dpr, event.touches[0].pageY * this.dpr);
+  this.target = new Vector(event.touches[0].clientX * this.dpr, event.touches[0].clientY * this.dpr);
 }
 
 // Defaults
 Canvas.prototype.options = {
-  count: 20,
-  speed: 0.5,
+  count: 11,
+  speed: 0.001,
   width: 400,
   height: 400,
-  size: 10,
-  radius: 5,
-  background: '29, 22, 52',
+  size: 5,
+  radius: 1,
+  background: '240, 240, 240, 0.6',
   maxDistance: 100
 }
 
@@ -144,9 +144,9 @@ Canvas.prototype.ghost = function() {
   this.ctx.globalCompositeOperation = "source-over";
   this.ctx.rect(0, 0 , this.width, this.height);
   if(typeof this.options.background === 'string') {
-    this.ctx.fillStyle = "rgb(" + this.options.background + ")";
+    this.ctx.fillStyle = "rgba(" + this.options.background + ")";
   } else  {
-    this.ctx.fillStyle = "rgb(" + this.options.background[0] + ")";
+    this.ctx.fillStyle = "rgba(" + this.options.background[0] + ")";
   }
     
   this.ctx.fill();
@@ -156,13 +156,13 @@ Canvas.prototype.ghostGradient = function() {
   var gradient;
   
   if(typeof this.options.background === 'string') {
-    this.ctx.fillStyle = 'rgb(' + this.options.background + ')';   
+    this.ctx.fillStyle = 'rgba(' + this.options.background + ')';   
   } else {
-     var gradient = this.ctx.createRadialGradient(this.width/2, this.height/2, 0, this.width/2, this.height/2, Math.max(this.width, this.height)/2);
+    var gradient = this.ctx.createLinearGradient(0, 0, 0, this.height);
     
     var length = this.options.background.length;
     for(var i = 0; i < length; i++){
-      gradient.addColorStop((i+1) / length, 'rgb(' + this.options.background[i] + ')');
+      gradient.addColorStop((i+1) / length, 'rgba(' + this.options.background[i] + ')');
     }
     this.ctx.fillStyle = gradient;
   }
@@ -205,7 +205,7 @@ Canvas.prototype.drawLines = function (point, color) {
   this.ctx.lineCap = 'round';
   while(++index < length) {
     this.ctx.lineWidth = (point.size * 2) *  point.closest[index].opacity;
-    this.ctx.strokeStyle = 'rgba(' + color + ', ' + point.closest[index].opacity + ')';
+    this.ctx.strokeStyle = 'rgba(250,250,250, ' + point.closest[index].opacity + ')';
     this.ctx.beginPath();
     this.ctx.moveTo(point.position.x, point.position.y);
     this.ctx.lineTo(point.closest[index].x, point.closest[index].y);
@@ -281,10 +281,10 @@ new Canvas({
   width: function() { return window.innerWidth; },
   height: function() { return window.innerHeight; },
   size: 15,
-  color: '30, 30, 30',
+  color: '30, 180, 1',
   maxDistance: 100,
-  background: ['222, 222, 222', '202, 202, 202']
-});
+  background: ['250,250,250,1', '215,216,215,0.8']
+})
 
 /////////////////////////////////////////////
 
