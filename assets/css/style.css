@@ -54,6 +54,10 @@ p {
   text-decoration: underline;
 }
 
+.fs-xs {
+  font-size: 0.6rem;
+}
+
 /* header */
 
 .header {
@@ -196,9 +200,10 @@ p {
 
 .book-now-button {
   padding: 0.5rem 1rem 0.4rem;
+  text-align: center;
   text-transform: uppercase;
   border-radius: 2px;
-  background: linear-gradient(80deg, #581889, #8840b7, #7934ad);
+  background: linear-gradient(60deg, #604a99, #7934ad);
   color: #fff;
   font-size: 0.8rem;
   margin: auto;
@@ -220,7 +225,7 @@ p {
   right: -1px;
   bottom: -1px;
   z-index: -1;
-  background: linear-gradient(80deg, #581889, #8840b7, #7934ad);
+  background: linear-gradient(60deg, #604a99, #7934ad);;
   border-radius: 10px;
   transition: 0.5s;
   opacity: 0;
