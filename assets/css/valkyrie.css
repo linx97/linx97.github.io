@@ -11,9 +11,13 @@
   -moz-text-fill-color: transparent;
 }
 
+.magenta {
+	background-image: url(../img/magenta-metal.jpeg);
+}
+
 h2 {
-	margin: 90px 10% 30px;
-    font-size: 2.2rem;
+	margin: 90px 10% 10px;
+    font-size: 2.4rem;
     letter-spacing: 2;
     line-height: 1.5;
     font-weight: 600;
@@ -47,8 +51,16 @@ h2 {
 	background-image: url(../img/valkyrie3.jpeg);
 }
 
+  .benefits ul {
+    display: block;
+    list-style-position: inside;
+    height: auto;
+    margin: 20px 0;
+    padding: 0;
+  }
+
 .benefits ul li::marker {
-    color: #da0097;
+    color: #bb0077;
 }
 
 @media screen and (min-width: 768px) {
