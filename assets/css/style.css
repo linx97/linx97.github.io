@@ -299,7 +299,7 @@ p {
 }
 
 .main.index h1 {
-  margin-top: 100px;
+  margin-top: 80px;
   line-height: 1.6;
   font-size: 1.4rem;  
   font-weight: 400;
@@ -345,6 +345,12 @@ p {
   margin: 0 auto;
 }
 
+.feature-card .top.egg-bg {
+  background-image: url(../img/peru+egg2.png);
+  min-height: 270px;
+  background-size: cover;
+}
+
 .feature-card .bottom {
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
@@ -388,7 +394,7 @@ p {
   left: 0;
   right: 0;
   height: 260px;
-  background-image: url(../img/harmonic-egg2.jpg);
+  background-image: url(../img/sweet2.png);
   background-size: cover;
   border-top-right-radius: 8px;
   border-top-left-radius: 8px;
@@ -805,7 +811,7 @@ p {
     min-height: 246px;
   }
   .main.index h1 {
-    margin-top: 200px;
+    margin-top: 166px;
     font-size: 1.7rem;
   }
   .card.feature-card {
@@ -967,6 +973,9 @@ p {
     padding: 0;
     font-size: 0.6rem;
     line-height: 1rem;
+  }
+  .feature-card .top.egg-bg {
+    background-position-x: right;
   }
 }
 
