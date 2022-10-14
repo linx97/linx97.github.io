@@ -437,15 +437,23 @@ p {
 }
 
 .book-now-bar {
-  padding: 3rem 2rem;
-  opacity: 0.8;
   font-size: 1.2rem;
   text-align: center;
-  background: linear-gradient(45deg, #812ba5, #167194);
   color: #fff;
   transition: 0.5s linear;
-  background-size: 170% 170%;
-  animation: bg-colors 9s ease infinite;
+  background-size: 360% 360%;
+  animation: bg-colors 23s ease infinite;  
+  background-image: url(../img/background.png);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.book-now-bar .bar-overlay {
+    padding: 3rem 2rem;
+  opacity: 0.7;
+  background: linear-gradient(45deg, #812ba5, #167194);
 }
 
 .book-now-bar h3 {
@@ -456,7 +464,7 @@ p {
 
 .book-now-bar p {
   margin-top: 0.5rem;
-  opacity: 0.8;
+  opacity: 0.84;
 }
 
 .book-now-bar .white-button {
@@ -464,7 +472,7 @@ p {
   color: #534a90;
   font-weight: bold;
   margin-top: 2rem;
-  opacity: 0.88;
+  opacity: 0.97;
   font-size: 1.1rem;
   max-width: 400px;
   width: auto;
@@ -478,7 +486,7 @@ p {
   box-shadow: 0px 0px 40px 6px rgba(255,255,255,0.75);
   -webkit-box-shadow: 0px 0px 40px 6px rgba(255,255,255,0.75);
   -moz-box-shadow: 0px 0px 40px 6px rgba(255,255,255,0.75);
-  opacity: 0.95;
+  opacity: 1;
   transition: 0.3s ease-in-out;
 }
 
@@ -973,9 +981,6 @@ p {
 
 
 @media (max-width: 768px){
-  body {
-    background-image: url(../img/background-mobile.png);
-  }
   .main h1 {
     font-size: 1.5rem;
   }
@@ -1130,5 +1135,17 @@ p {
     }
     100% {
         background-position: 0% 50%;
+    }
+}
+
+@keyframes bg-zoom {
+    0% {
+        background-size: 220% 220%;
+    }
+    50% {
+        background-size: 100% 100%;
+    }
+    100% {
+        background-size: 220% 220%;
     }
 }
