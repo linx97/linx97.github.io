@@ -441,8 +441,8 @@ p {
   text-align: center;
   color: #fff;
   transition: 0.5s linear;
-  background-size: 360% 360%;
-  animation: bg-colors 23s ease infinite;  
+  background-size: 200% 200%;
+  animation: bg-colors 25s ease infinite;  
   background-image: url(../img/background.png);
   background-attachment: fixed;
   background-size: cover;
