@@ -328,7 +328,7 @@ p {
   transition: all 0.2s ease-in-out;
 }
 .card.feature-card {
-  margin: 120px auto 70px;
+  margin: 100px auto 70px;
   width: 60%;
 }
 
@@ -409,7 +409,7 @@ p {
   width: 239px;
   border-radius: 4px;
   letter-spacing: 1.2px;
-  background: linear-gradient(-45deg, #2b55b3, #812ba5, #006fe0);
+  background: linear-gradient(-45deg, #2b55b3, #812ba5, #2474ac);
   color: #fff;
   margin: auto;
   text-decoration: none;
@@ -436,6 +436,51 @@ p {
   color: #6973d9;
 }
 
+.book-now-bar {
+  padding: 3rem 2rem;
+  opacity: 0.8;
+  font-size: 1.2rem;
+  text-align: center;
+  background: linear-gradient(45deg, #812ba5, #167194);
+  color: #fff;
+  transition: 0.5s linear;
+  background-size: 170% 170%;
+  animation: bg-colors 9s ease infinite;
+}
+
+.book-now-bar h3 {
+  font-size: 2.2rem;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.book-now-bar p {
+  margin-top: 0.5rem;
+  opacity: 0.8;
+}
+
+.book-now-bar .white-button {
+  background: #fff;
+  color: #534a90;
+  font-weight: bold;
+  margin-top: 2rem;
+  opacity: 0.88;
+  font-size: 1.1rem;
+  max-width: 400px;
+  width: auto;
+  text-transform: uppercase;
+  box-shadow: 0px 0px 22px 3px rgba(255,255,255,0.75);
+-webkit-box-shadow: 0px 0px 22px 3px rgba(255,255,255,0.75);
+-moz-box-shadow: 0px 0px 22px 3px rgba(255,255,255,0.75);
+}
+
+.book-now-bar .white-button:hover {
+  box-shadow: 0px 0px 40px 6px rgba(255,255,255,0.75);
+  -webkit-box-shadow: 0px 0px 40px 6px rgba(255,255,255,0.75);
+  -moz-box-shadow: 0px 0px 40px 6px rgba(255,255,255,0.75);
+  opacity: 0.95;
+  transition: 0.3s ease-in-out;
+}
 
 /*TESTIMONIALS & CAROUSEL*/
 
@@ -811,7 +856,7 @@ p {
     min-height: 246px;
   }
   .main.index h1 {
-    margin-top: 166px;
+    margin-top: 130px;
     font-size: 1.7rem;
   }
   .card.feature-card {
@@ -871,7 +916,7 @@ p {
     padding: 3rem;
   }
   .main.index h1 {
-    margin-top: 260px;
+    margin-top: 140px;
     font-size: 2.2rem;
   }
   .benefits ul {
