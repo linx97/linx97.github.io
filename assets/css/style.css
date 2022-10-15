@@ -235,6 +235,7 @@ p {
   opacity: 1;
 }
 
+
 /*menu dropdowns*/
 
 
@@ -442,7 +443,7 @@ p {
   color: #fff;
   transition: 0.5s linear;
   background-size: 200% 200%;
-  animation: bg-colors 50s ease-in-out infinite;  
+  animation: bg-colors 60s ease-in-out infinite;  
   background-image: url(../img/background.png);
   background-attachment: fixed;
   background-size: cover;
@@ -1009,6 +1010,11 @@ p {
   }
   .carousel-control.prev {
     left: 41%;
+  }
+  .header .book-now-button {
+    padding: 0.8rem;
+    font-size: 1.2rem;
+    background: linear-gradient(60deg, #595db4, #7934ad);
   }
 }
 
