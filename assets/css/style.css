@@ -442,7 +442,7 @@ p {
   color: #fff;
   transition: 0.5s linear;
   background-size: 200% 200%;
-  animation: bg-colors 25s ease infinite;  
+  animation: bg-colors 50s linear infinite;  
   background-image: url(../img/background.png);
   background-attachment: fixed;
   background-size: cover;
@@ -1135,17 +1135,5 @@ p {
     }
     100% {
         background-position: 0% 50%;
-    }
-}
-
-@keyframes bg-zoom {
-    0% {
-        background-size: 220% 220%;
-    }
-    50% {
-        background-size: 100% 100%;
-    }
-    100% {
-        background-size: 220% 220%;
     }
 }
