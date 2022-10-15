@@ -442,7 +442,7 @@ p {
   color: #fff;
   transition: 0.5s linear;
   background-size: 200% 200%;
-  animation: bg-colors 50s linear infinite;  
+  animation: bg-colors 50s ease-in-out infinite;  
   background-image: url(../img/background.png);
   background-attachment: fixed;
   background-size: cover;
